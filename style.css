@@ -1,0 +1,203 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Variables ── */
+:root {
+  --black: #000;
+  --white: #fff;
+  --yellow: #ffe600;
+  --border: 3px solid var(--black);
+  --shadow: 6px 6px 0 var(--black);
+  --shadow-hover: 10px 10px 0 var(--black);
+  --font: 'Courier New', Courier, monospace;
+}
+
+/* ── Base ── */
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  border-bottom: var(--border);
+  padding: 3rem 2rem 2.5rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 0.75rem;
+  background: var(--yellow);
+  display: inline-block;
+  padding: 2px 8px;
+  border: var(--border);
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── Section title ── */
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 2rem;
+  border-bottom: var(--border);
+  padding-bottom: 0.5rem;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Card ── */
+.card {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--white);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+
+.card:hover,
+.card:focus-visible {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-4px, -4px);
+  outline: none;
+}
+
+.card:active {
+  box-shadow: 2px 2px 0 var(--black);
+  transform: translate(4px, 4px);
+}
+
+.card-inner {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 200px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.card-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.card-tags li {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid var(--black);
+  padding: 2px 8px;
+  background: var(--yellow);
+}
+
+.card-arrow {
+  font-size: 1.5rem;
+  font-weight: 900;
+  align-self: flex-end;
+  transition: transform 0.15s ease;
+}
+
+.card:hover .card-arrow {
+  transform: translateX(6px);
+}
+
+/* ── Footer ── */
+footer {
+  border-top: var(--border);
+  padding: 1.5rem 2rem;
+}
+
+footer a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: 1px;
+  transition: background 0.1s;
+}
+
+footer a:hover {
+  background: var(--yellow);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  header {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+
+  main {
+    padding: 2rem 1.25rem;
+  }
+
+  footer {
+    padding: 1.25rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
