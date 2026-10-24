@@ -3,44 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luis Navarro — Web Experience</title>
+  <title>Luis Navarro</title>
+  <meta name="description" content="Proyectos y despliegues recientes de Luis Navarro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <div class="header-inner">
-      <h1>Luis Navarro</h1>
-      <p class="subtitle">Web Experience</p>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="logo" href="/">Luis Navarro</a>
+      <a class="masthead-link" href="https://github.com/Luisnvb" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </header>
 
-  <main>
-    <section class="projects">
-      <h2 class="section-title">Proyectos</h2>
-      <div class="grid">
-
-        <a class="card" href="https://luisnvb.github.io/portfolio">
-          <div class="card-inner">
-            <h3 class="card-title">Portfolio</h3>
-            <p class="card-desc">Portfolio personal con mis proyectos y experiencia</p>
-            <ul class="card-tags">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-            <span class="card-arrow">→</span>
-          </div>
-        </a>
-
-      </div>
+  <main class="wrap">
+    <section class="intro">
+      <p class="kicker">Proyectos</p>
+      <h1>Cosas que he construido y desplegado recientemente.</h1>
     </section>
+
+    <ol class="feed">
+
+      <li class="entry">
+        <div class="meta">
+          <span class="tag">TypeScript</span>
+          <time datetime="2026-10">Oct 2026</time>
+        </div>
+        <h2><a href="https://luisnvb.dev/phase-lab/">Phase Lab</a></h2>
+        <p>App educativa para explorar las técnicas temporales de la música de proceso: desfase, sustitución, resultantes y ambigüedad métrica.</p>
+        <div class="links">
+          <a href="https://luisnvb.dev/phase-lab/">Abrir ↗</a>
+          <a href="https://github.com/Luisnvb/phase-lab" target="_blank" rel="noopener">Código</a>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="meta">
+          <span class="tag">TypeScript</span>
+          <time datetime="2026-10">Oct 2026</time>
+        </div>
+        <h2><a href="https://shed-web.vercel.app" target="_blank" rel="noopener">Shed Web</a></h2>
+        <p>Entrenador de oído para jazz en el navegador, que traslada el núcleo teórico y la pedagogía de Shed desde el proyecto del M-VAVE FM-1.</p>
+        <div class="links">
+          <a href="https://shed-web.vercel.app" target="_blank" rel="noopener">Abrir ↗</a>
+          <a href="https://github.com/Luisnvb/shed-web" target="_blank" rel="noopener">Código</a>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="meta">
+          <span class="tag">C</span>
+          <time datetime="2026-10">Oct 2026</time>
+        </div>
+        <h2><a href="https://github.com/Luisnvb/fm1-shed" target="_blank" rel="noopener">FM1 Shed</a></h2>
+        <p>Shed como modo de entrenamiento auditivo de jazz para el sintetizador M-VAVE FM-1, construido sobre FM1 Open.</p>
+        <div class="links">
+          <span class="note">Firmware · sin despliegue web</span>
+          <a href="https://github.com/Luisnvb/fm1-shed" target="_blank" rel="noopener">Código</a>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="meta">
+          <span class="tag">Next.js</span>
+          <time datetime="2026-09">Sep 2026</time>
+        </div>
+        <h2><a href="https://sabios-lupulo.vercel.app" target="_blank" rel="noopener">Sabios del Lúpulo</a></h2>
+        <p>Simulador de trivial por equipos. Next.js, Drizzle y Neon.</p>
+        <div class="links">
+          <a href="https://sabios-lupulo.vercel.app" target="_blank" rel="noopener">Abrir ↗</a>
+          <a href="https://github.com/Luisnvb/sabios-lupulo" target="_blank" rel="noopener">Código</a>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="meta">
+          <span class="tag">Next.js</span>
+          <time datetime="2026-09">Sep 2026</time>
+        </div>
+        <h2><a href="https://trivia-friends-three.vercel.app" target="_blank" rel="noopener">Trivia Friends</a></h2>
+        <p>Trivial sobre la serie Friends. Next.js, Drizzle y Neon.</p>
+        <div class="links">
+          <a href="https://trivia-friends-three.vercel.app" target="_blank" rel="noopener">Abrir ↗</a>
+          <a href="https://github.com/Luisnvb/trivia-friends" target="_blank" rel="noopener">Código</a>
+        </div>
+      </li>
+
+    </ol>
   </main>
 
-  <footer>
+  <footer class="wrap footer">
+    <span>© 2026 Luis Navarro</span>
     <a href="https://github.com/Luisnvb" target="_blank" rel="noopener">github.com/Luisnvb</a>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
